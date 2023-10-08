@@ -15,7 +15,7 @@ servers=(
 )
 
 # Imprime a lista de servidores com números
-echo "Escolha um servidor para consulta de IP público (1-8):"
+echo "Escolha um servidor para consulta de IP público (1-4):"
 for i in {1..4}; do
   echo "  ${i}. ${servers[i-1]}"
 done
