@@ -32,7 +32,7 @@ server="${servers[${server_number}-1]}"
 
 # Realiza a consulta
 #curl -s "${server}" | grep -oP '(?<=IP: ).*' <= comando precisa ser melhorado, não retorna resultado
-publicip=$(curl -s "${server}")  #substituindo c comando não funcional anterior
+publicip=$(curl -s "${server}")  #substituindo o comando não funcional anterior
 echo IP: $publicip
 
 # Imprime o nome do servidor na saída
