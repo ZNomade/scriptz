@@ -1,5 +1,7 @@
 # Script criado por [=Zac/ZNômade=] em 30/05/2024 - Versão 1.0
-#Definindo variável Global
+#
+# Definindo variável Global
+
 url_servidores = {
     "ifconfig.me": "https://ifconfig.me",
     "icanhazip.com": "https://icanhazip.com",
