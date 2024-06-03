@@ -1,11 +1,32 @@
 #!/bin/bash
+# =============================================================================
+# Autor: [=Zac|ZNômade=]
+# Data de Criação: 02/06/2024
+# Versão: 1.0
+# Licença: None
 #
-# Script para mostrar os 10 maiores arquivos existentes em um PATH
-# Uso: ./nome_do_script DIR_PATH
-# Versão inicial 
-# 
-# 
-# Criado em 02/06/2024 by [=Zac|ZNômade=]
+# Descrição:
+# Este script analisa um diretório fornecido pelo usuário e lista os 10 maiores
+# arquivos, com a opção de incluir ou não subdiretórios na análise.
+#
+# Uso:
+# ./nome_do_script.sh DIR_PATH
+#
+# Parâmetros:
+# DIR_PATH - O caminho do diretório a ser analisado.
+#
+# Saída:
+# Lista os 10 maiores arquivos no diretório especificado, com seus tamanhos.
+#
+# Exemplo de Uso:
+#./nome_do_script.sh /caminho/para/diretorio
+#
+# Notas:
+# Certifique-se de ter permissões de leitura no diretório especificado.
+#
+# Histórico de Revisões:
+# Versão 1.0: 02/06/2024 - Versão inicial do script.
+# =============================================================================
 
 
 large()
@@ -35,8 +56,7 @@ large()
 			  ;;
 		   esac
 		   exit 0
-		       
-		   }
+		}
 
 	 if [[ "$depth" =~ ^[0-9]+$ ]];
 	   then
