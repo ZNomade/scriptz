@@ -14,7 +14,7 @@ Various simple and useful shell scriptz, mainly for the **bash shell**.
 
 Basic instalation info:
 
-1. Clone the repository or directly download the scripts: `git clone https://github.com/ZNomade/scriptz
+1. Clone the repository or directly download the scripts: `git clone https://github.com/ZNomade/scriptz`
 2. Navigate to the project directory: `cd scriptz`
 3. Assign proper execution permission to the file
 
