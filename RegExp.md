@@ -1,4 +1,4 @@
-# Complete Tutorial on Regular Expressions in Computing
+# Tutorial on Regular Expressions in Computing
 
 Regular expressions, often abbreviated as regex or regexp, are sequences of characters that define search patterns. These patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation. They are a powerful tool for text processing and manipulation.
 
