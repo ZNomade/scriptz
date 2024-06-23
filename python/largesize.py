@@ -2,6 +2,7 @@
 # =============================================================================
 # Author: [=Zac|ZNômade=]
 # Creation Date: 2024-06-06
+# Last Modified: 2024-06-22
 # Version: 1.0
 # License: None
 #
@@ -26,6 +27,8 @@
 #
 # Revision History:
 # Version 1.0: 2024-06-06 - Initial version of the script.
+# Version 1.0: 2024-06-22 - Fixed command string handling and the way files and 
+# sizes are extracted and sorted.
 # =============================================================================
 
 
@@ -38,22 +41,20 @@ def print_usage(script_name):
 
 def get_largest_files(dir_path, include_subdirs):
     if include_subdirs:
-        command = ['find', dir_path, '-type', 'f', '-exec', 'du', '-h', '{}', '+']
+        command = f'find {dir_path} -type f -exec du -h {{}} + | sort -hr | head -n 10'
     else:
-        command = ['find', dir_path, '-maxdepth', '1', '-type', 'f', '-exec', 'du', '-h', '{}', '+']
+        command = f'find {dir_path} -maxdepth 1 -type f -exec du -h {{}} + | sort -hr | head -n 10'
 
-    result = subprocess.run(command, capture_output=True, text=True)
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
     if result.returncode != 0:
         print(f"Erro ao executar o comando find: {result.stderr}")
         sys.exit(1)
 
     files = result.stdout.strip().split('\n')
-    files = [line.split('\t') for line in files]
-    files.sort(key=lambda x: x[0], reverse=True)
-    largest_files = files[:10]
+    largest_files = [line.split('\t') for line in files]
 
-    for size, file in largest_files:
-        print(f"{size}\t{file}")
+    for file in largest_files:
+        print(file[0], '\t', file[1])
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
