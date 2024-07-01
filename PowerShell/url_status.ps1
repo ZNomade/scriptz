@@ -32,25 +32,25 @@
 # =============================================================================
 
 
-# Verifica se o arquivo com as URLs foi fornecido como argumento
+# Checks if the file with URLs was given as an argument
 if ($args.Length -eq 0) {
-    Write-Host "Uso: .\verifica_urls.ps1 <arquivo_com_urls>"
+    Write-Host "Usage: ./script_name.ps1 <file_with_urls>"
     exit 1
 }
 
-# Verifica se o arquivo existe
+# Check if file exists
 $filePath = $args[0]
 if (-Not (Test-Path $filePath)) {
-    Write-Host "Arquivo $filePath não encontrado!"
+    Write-Host "File $filePath not found!"
     exit 1
 }
 
-# Lê o arquivo linha por linha
+# Read the file line by line
 Get-Content $filePath | ForEach-Object {
     $url = $_
-    # Verifica se a linha não está vazia
+    # Checks if the line is not empty
     if (-Not [string]::IsNullOrWhiteSpace($url)) {
-        # Faz a requisição HTTP e obtém o código de status
+        # Makes the HTTP request and gets the status code
         try {
             $response = Invoke-WebRequest -Uri $url -UseBasicParsing -ErrorAction Stop
             $statusCode = $response.StatusCode
