@@ -48,4 +48,4 @@ while [ $SECONDS -lt $end ]; do
 done
 
 # Displays the last generated odd number
-echo "Número ímpar gerado: $odd_number"
+echo "Odd number generated: $odd_number"
