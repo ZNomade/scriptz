@@ -29,4 +29,4 @@ The scripts are executed in the usual way of executing commands in Linux:
 
 Not applicable
 
-[![Watch the video](https://github.com/ZNomade/scriptz/blob/main/shell_scriptz/geoipthumb_resize.jpg)](https://github.com/ZNomade/scriptz/raw/refs/heads/main/shell_scriptz/geoip_demo.mp4)
+[![Watch the video](https://github.com/ZNomade/scriptz/blob/main/shell_scriptz/geoipthumb_resize.jpg)](https://github.com/ZNomade/shell_scriptz/geoip_demo.mp4)
