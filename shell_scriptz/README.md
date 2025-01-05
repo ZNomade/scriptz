@@ -28,3 +28,5 @@ The scripts are executed in the usual way of executing commands in Linux:
 ## License
 
 Not applicable
+
+[![Geoip.sh demo](https://github.com/ZNomade/scriptz/blob/main/shell_scriptz/geoipthumb.jpg)](https://github.com/ZNomade/scriptz/blob/main/shell_scriptz/geoip_demo.mp4)
