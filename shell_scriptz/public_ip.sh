@@ -22,7 +22,7 @@ done
 read server_number
 
 # Verifica se o número é válido
-if [[ ${server_number} -gt 8 || ${server_number} -lt 1 ]]; then
+if [[ ${server_number} -gt 4 || ${server_number} -lt 1 ]]; then
   echo "Número inválido."
   exit 1
 fi
